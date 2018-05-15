@@ -1,0 +1,11 @@
+[Unit]
+Description=Galileo Service Robot Documents gitbook service
+
+[Service]
+Type=simple
+User=bwbot
+WorkingDirectory=/home/bwbot/data/src/gitbook/galileo-servicebot-doc
+ExecStart=/usr/local/bin/gitbook --port 22232 --lrport 22331 serve
+
+[Install]
+WantedBy=multi-user.target
