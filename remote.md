@@ -39,4 +39,4 @@
 
 本章演示视频：
 
-[遥控图传操作](http://139.199.64.153/media/docs/nav/videos/remote.mp4)
+[遥控图传操作](https://www.bwbot.org/s/sYYkyd)
