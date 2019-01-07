@@ -47,7 +47,7 @@
 
 本节完整演示视频：
 
-[视觉地图的建立过程](http://139.199.64.153/media/docs/nav/videos/nav-map.mp4)
+[视觉地图的建立过程](https://www.bwbot.org/s/H3B6xC)
 
 ## 3.3 导航轨迹绘制和目标点设置
 
@@ -109,7 +109,7 @@
 
 本节完整演示视频：
 
-[绘制规划路径和目标点](http://139.199.64.153/media/docs/nav/videos/nav-draw.mp4)
+[绘制规划路径和目标点](https://www.bwbot.org/s/pY3uAg)
 
 ## 3.4 导航服务的开启与关闭
 
@@ -137,7 +137,7 @@
 
 本节完整演示视频：
 
-[机器人导航服务的启动与关闭](http://139.199.64.153/media/docs/nav/videos/nav-service.mp4)
+[机器人导航服务的启动与关闭](https://www.bwbot.org/s/fBYkCv)
 
 `紧急无法控制情况下，请手动按 下车盘上的红色开关，使小车急停`
 
@@ -163,4 +163,4 @@
 
 在第一个下拉菜单中选择地图名称。点击右侧的删除按钮即可删除地图。
 
-[机器人地图管理](http://139.199.64.153/media/docs/nav/videos/nav-map-manager.mp4)
+[机器人地图管理](https://www.bwbot.org/s/TPuSCo)
