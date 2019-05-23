@@ -6,4 +6,4 @@
 
 [送餐机器人 Android App](https://doc.bwbot.org/en/books-online/chitu-client-android/)
 
-[送餐机器人自定义语音工具](./audio.md)
+[送餐机器人自定义语音工具](./audio.html)
