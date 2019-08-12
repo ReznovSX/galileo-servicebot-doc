@@ -6,7 +6,7 @@
 
 演示视频
 
-<video src="https://bwbot.org/s/sHt8wN" style="max-width: 100%"></video>
+<video src="https://bwbot.org/s/sHt8wN" controls style="max-width: 100%"></video>
 
 ## 陀螺仪标定
 
