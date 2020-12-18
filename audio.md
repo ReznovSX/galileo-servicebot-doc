@@ -1,71 +1,71 @@
-# 送餐机器人语音修改工具
+# Chapter4 Audio Editing Tool
 
-## 功能
+## 4.1 Function
 
-客户可以使用此软件修改机器人的默认语音。可以实现语音自定义、翻译、宣传商品等效果。
+Customers can use this software to modify the robot's default audio. It can achieve audio customization, translation, publicity and other effects。
 
-## 安装
+## 4.2 Install
 
-[下载安装包](https://bwbot.org/s/gJZ8Da)
+[Download packages](https://bwbot.org/s/gJZ8Da)
 
-根据提示安装，推荐使用默认配置安装
+Install according to the prompt. It is recommended to install with the default configuration
 
-## 使用
+## 4.3 Instructions
 
-软件安装完成后，会在桌面创建`语音设置助手`快捷方式。
+After the software is installed, a shortcut to the audio settings assistant will be created on the desktop.
 
-![软件图标](/images/audio-icon.png)
+![audio icon](/images/audio-icon.png)
 
-在打开软件之前，先保证机器人正常工作。然后把自己的电脑和机器人连接到同一局域网中。
+Before opening the software, make sure the robot works normally. Then connect your computer and robot to the same LAN.
 
-``注意此软件和伽利略客户端不能同时使用，使用此软件请前先关闭伽利略导航客户端。``
+``ATTENTION: Please close the Galileo software before using audio editing tool.``
 
-单击打开此软件。软件界面如下图所示
+Open the software and the UI shows as below.
 
-![软件界面](/images/audio-ui.png)
+![tool UI](/images/audio-ui.png)
 
-等待一会，机器人下拉菜单中会出现此时局域网中的机器人。
+Wait a moment, The robot in the local area network will appear in the robot drop-down menu。
 
-![选择机器人](/images/audio-select.png)
+![choose robot](/images/audio-select.png)
 
-点击机器人ID，选择机器人
+Click ID to choose.
 
-此时软件会自动连接选择的机器人，然后载入语音控制界面
+Then it will connect to the robot and loading data.
 
-![语音控制界面](/images/audio-connected.png)
+![audio control ui](/images/audio-connected.png)
 
-点击对应语音的播放按钮就可以听到机器人说对应的话。如果想要修改默认语音，点击更换按钮，然后选择自己的语音文件就可以了。现在只支持wav和mp3两种语音格式。
+Click the play button of the corresponding audio to hear the robot say the corresponding words. If you want to modify the default audio, click the replace button, and then select your own audio file. Now only wav and MP3 are supported.
 
-如果想要恢复原来的默认语音可以点击删除按钮。此时软件会删除用户自定义语音，同时从网上下载默认语音。所以要保证机器人能够访问网络。
+If you want to restore the original default audio, you can click the delete button. At this time, the software will delete the user-defined audio and download the default audio from the Internet. So make sure the robot can access the network.
 
-## 如何让机器人说外语
+## 4.4 How to speak other languages
 
-我们点击语言列表，可以看到机器人很很多可以选择的语言。首先选择我们想要机器人说的外语，比如说意大利语
+Click languages list, and then we can see many languages can be chosen. For example, we want robot to speak Italian.
 
-![选择语言](/images/audio-lang.png)
+![select  language](/images/audio-lang.png)
 
-之后按照之前的方法把对应的语音替换成意大利语的音频文件就可以了。
+After that, according to the previous method to replace the corresponding audio with the Italian audio file.
 
-## 自定义语音
+## 4.5 Custom audio
 
-有时候我们想让机器人通过语音帮我们宣传商品。这个功能也可以通过语音助手来实现。
+Sometimes we want robots to help us promote products through audio. This function can also be implemented by audio assistant.
 
-首先点击主界面右上角的添加按钮，打开添加语音对话框。
+First, click the Add button in the upper right corner of the main interface to open the add audio dialog box.
 
-![主界面](./images/tts.png)
+![main ui](./images/tts.png)
 
-![添加语音](./images/tts-add.png)
+![add audio](./images/tts-add.png)
 
-在其中输入想要机器人说的话，比如我们在餐厅中使用。想要机器人为我们介绍小龙虾这道菜。就可以在名称里面输入`小龙虾`，然后内容输入`小龙虾麻辣可口，非常好吃，建议大家品尝。`
+Enter what you want the robot to say, like we use it in a restaurant. I want a robot to introduce crayfish to us. You can enter "crayfish" in the name, and then enter the content "crayfish spicy and delicious, very delicious, we suggest you taste it. `
 
-![小龙虾界面](./images/xls.png)
+![crayfish ui](./images/xls.png)
 
-这样我们在主界面的最下方就可以看到新添加的小龙虾语音了。
+In this way, we can see the newly added crayfish audio at the bottom of the main interface.
 
-![小龙虾已添加](./images/tts-added.png)
+![crayfish added](./images/tts-added.png)
 
-点击播放就可以听到语音介绍了。如果对自动生成的语音不满意你也可以用之前介绍的替换方法，更换成自己准备的语音文件。
+Click play to hear the audio introduction. If you are not satisfied with the automatically generated audio, you can also replace it with your own prepared audio file by using the replacement method described earlier.
 
-添加后的语音可以在机器人APP中使用，APP可以控制机器人循环播放对应语音。这样机器人就可以为您推销商品了。
+The added audio can be used in the robot app, which can control the robot to play the corresponding audio circularly. In this way, robots can sell products for you.
 
-APP中的语音设置可以参考[这里](https://doc.bwbot.org/en/books-online/chitu-client-android/sell-product.html)
+The audio settings in app can be referred to[click there](https://doc.bwbot.org/en/books-online/chitu-client-android/sell-product.html)

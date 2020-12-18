@@ -1,31 +1,31 @@
-# 4G远程图传遥控
+# Chapter8 Remote Control with 4G and Image
 
-伽利略导航系统自带物联网系统，用户可以通过4G网络遥控机器人。
+Galileo navigation system with Internet of things system, users can remote control the robot through 4G network.
 
-## 安装
+## 8.1 Install
 
-在[此处](http://bwbot.org/s/tEcBiU)下载安装遥控机器人客户端。安装完成之后界面如下图所示
+[Download](http://bwbot.org/s/tEcBiU)remote robot package and install. After installation, the interface is shown in the figure below.
 
 ![iot client](./images/iot1.png)
 
-## 配置机器人
+## 8.2 Configuration
 
-机器人物联网功能默认关闭，需要手动开启（少数型号默认开启，详情请咨询机器人销售）。开发者可以通过[技术文档](http://community.bwbot.org/topic/773/)进行开启，不建议一般用户开启。
+By default, the networking function of robots and people is turned off by default and needs to be turned on manually (for a few models, please consult the robot sales department for details)。Developers can use the [doc](http://community.bwbot.org/topic/773/) to turn on the function. General users are not recommended to open it.
 
-配置完成后注意修改机器人的远程连接密码 `IOT_PASSWORD`
+After configuration, pay attention to modify the remote connection password of the robot `IOT_PASSWORD`.
 
-## 遥控机器人
+## 8.3 Remote
 
-机器人端保证正常工作后，点击客户端的未连接按钮。在弹出的窗口中输入机器人的id和远程连接密码
+After the robot side ensures normal operation, click the unconnected button of the client. Enter the ID and remote connection password of the robot in the pop-up window.
 
 ![iot client 2](./images/iot2.png)
 
-输入完成之后点击新增连接按钮，正常情况下客户端就可以遥控机器人了。
+After the input is completed, click the Add Connection button. Under normal circumstances, the client can remotely control the robot.
 
-成功连接后连接信息会自动显示在下面的最近连接列表中。下次可以直接点击对应按钮直接连接，不再需要输入连接信息。
+After successful connection, the connection information will be automatically displayed in the recent connections list below. Next time, you can directly click the corresponding button to connect directly, no longer need to input connection information.
 
-成功连接后客户端如下图所示
+The client will show in the figure as the picture below after successful connection 
 
 ![iot client 3](./images/iot3.png)
 
-通过键盘WSAD按键控制速度，上下箭头按键控制机器人速度。
+The speed is controlled by WSAD key on the keyboard, and the speed of robot is controlled by up and down arrow keys.

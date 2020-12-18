@@ -1,35 +1,45 @@
-# 常见问题与处理办法
+# Chapter9 FAQ
 
-## 4.1 图传画面卡顿、延时
+## 4.1 Image transmission picture freeze, delay
 
-请右键关闭图传后，重新打开图传，如果问题还是存在，请等待机器人驶离这段信号阻塞区域后再尝试
+Right-click to close the image transmission, and then reopen the image transmission, if the problem still exists, please wait for the robot to drive away from this signal blocking area before trying again.
 
-## 4.2 建图过程中视觉状态显示“丢失”，黑白图传画面中没有出现青绿色的特征点
+## 4.2 The visual status shows "missing" during the construction process, and no cyan feature points appear in the black and white image transmission screen
 
-分如下两种情况：
-  a. 打开视觉后，视觉状态没有出现过“追踪中”
-  b. 视觉状态之前出现过“追踪中”，遥控建图过程中突然变成了“丢失”
+There are two cases as follows:
+   
+a. After turning on the vision, the visual state has not been "tracking";
+   
+b. "Tracking" appeared before the visual state, and suddenly became "lost" during the remote-control drawing process.
+  
+SOLUTION: 
+   
+a. Try to ensure that the robot moves in a straight line, move forward for a period of time and then back for a period of time, and repeat the action until the visual state becomes "tracking";
+   
+b. Return the robot (ensure that the orientation of the robot remains unchanged) to the closest position where the visual state is "tracking", so that the robot vision system is locked again;
+   
+c. After trying both methods for many times, if it still shows "missing", please turn off the vision and then turn on the vision again, and scan the image from the beginning.
 
-解决办法：
-  a.尽量保证机器人为直线运动，前进一段时间后再后退一段时间，如此反复动作直到视觉状态变成“追踪中”
-  b.将机器人退回（保证机器人朝向不变）到视觉状态出现“追踪中”的最近位置，使机器人视觉系统重新锁定。
-  c.两个办法都尝试多次后，如果还是显示“丢失”，请关闭视觉然后重新开启视觉，从头开始扫描建图。
+## 4.3 After starting the service, the visual status always shows "lost" and the robot swings in place
 
-## 4.3 开启自主巡检后，视觉状态一直显示“丢失”，机器人在原地摆动
+This situation indicates that the robot cannot recognize the current position, and there are two possibilities:
+  
+a. The current position has not been recorded during the construction scan, please remote control the robot to the scanned position to ensure that the orientation of the robot is the same as the orientation during the construction, and then restart the autonomous inspection;
+  
+b. The light intensity or item distribution at the current location has changed significantly, and the environment needs to be rescanned for construction, and the inspection paths and stations also need to be redrawn.
 
-这种情况说明机器人无法识别当前位置，有两种可能：
-a.当前位置在建图扫描过程中没有被记录过，b.当前位置的光照强度或者物品分布发生了较大的变化。
-对于第一种情况请将机器人遥控到建图扫描过的位置，保证机器人朝向和建图时的朝向一致，再重新开启自主巡检。
-第二种情况，需要对环境进行重新扫描建图，巡检路径和站点也需要重新绘制。
+## 4.4 Unable to turn off navigation service
 
-## 4.4 无法关闭导航服务
+a.It may be that the network connection is not available, you can try to make the control terminal close to the robot, and then turn off the navigation service;
 
-多尝试点击几次，如果还是无法关闭，请手动关闭机器人底盘电源开关后，再通过客户端软件使车载主机关机。
+b. The system processing information has not yet reacted, just a moment later;
 
-## 4.5 规划巡检路径和轨迹时，加载的地图显示出一团乱糟糟的青色点、蓝色机器人轨迹点明显不像建图时的遥控路径
+c. When it is found that it still cannot be turned off normally, you can manually turn off the robot power switch.
 
-这说明视觉地图的建立失败了，请重新进行一次扫描建图，然后再尝试。
+## 4.5 When planning the path, the loaded map shows a mess of gray dots, and the blue trajectory point of the robot is not like the remote control path when the map is scanned. 
 
-## 4.6 客户端无法连接机器人
+This means that the creation of this map has failed. Please rescan the map and try again.
 
-请登录局域网路由管理界面，检查客户端PC和机器人主机是否都已经连上网络，参考第二章的联网操作重新设置一下两者网络。
+## 4.6 The client cannot connect to the robot
+
+Please check your network to make sure that both computer and robot already connect to the network.

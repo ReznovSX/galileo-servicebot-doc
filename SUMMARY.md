@@ -1,21 +1,21 @@
 # Summary
 
-* [引言](README.md)
+* [Introduction](README.md)
 
-* [一. 控制软件的安装](install.md)
+* [1. Install Software](install.md)
 
-* [二. 遥控图传](remote.md)
+* [2. Ues Remote Control with Image](remote.md)
 
-* [三. 视觉导航](nav.md)
+* [3. Vision Navigation](nav.md)
 
-* [四. 语音设置助手](audio.md)
+* [4. Audio Editing Tool](audio.md)
   
-* [五. 机器人标定](calibration.md)
+* [5. The Calibration of Robot](calibration.md)
   
-* [六. 机器人参数设置](params.md)
+* [6. Robot Setting](params.md)
 
-* [七. IO控制](io.md)
+* [7. I/O Control](io.md)
   
-* [八. 4G远程图传遥控](remote-control.md)
+* [8. Remote Control with 4G and Image](remote-control.md)
 
-* [九. 常见问题于处理办法](faq.md)
+* [9. FAQ](faq.md)

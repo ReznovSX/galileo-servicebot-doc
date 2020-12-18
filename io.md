@@ -1,11 +1,11 @@
-# IO控制
+# Chapter7 I/O Control
 
-对于有些机器人的使用场景需要对机器人的IO进行控制，通过IO控制面板可以非常方便的操作。
+For some robot scenarios, it is necessary to control the IO of the robot, which can be easily operated through the IO control panel.
 
-在连接机器人后点击右下角IO控制面板
+After connecting the robot, click the IO control panel in the lower right corner.
 
-![IO控制面板](images/io.png)
+![IO control panel](images/io.png)
 
-可以看到有三个IO，同时标有高电平和低电平两个选项。
+As you can see, there are three IO's marked with high level and low level options.
 
-如果机器人程序不支持IO控制功能，则对应的IO按钮为禁用状态。如果机器人支持IO控制功能，则IO控制面板会显示机器人对应IO当前的电平状态。如果点击对应的电平选项，程序会把机器人对应的IO设置成你设置的电平。
+If the robot program does not support the IO control function, the corresponding IO button is disabled. If the robot supports IO control function, the IO control panel will display the current level state of IO corresponding to the robot. If you click the corresponding level option, the program will set the corresponding io of the robot to the level you set.

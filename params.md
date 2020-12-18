@@ -1,83 +1,85 @@
-# 机器人参数修改
+# Chapter6 Robot Setting
 
-对应于不同的应用环境所需要的机器人的表现会有差别。比如有的场景需要机器人运动快一些，有的场景却需要机器人运动的更加平稳一些。机器人的表现都是由对应的参数确定的。通过机器人参数修改界面，我们可以轻松的修改机器人的参数从而让机器人更加适应我们的应用场景。
+According to different application environment, the performance of robots will be different. For example, some scenes need robots to move faster, while others need robots to move more smoothly. The performance of the robot is determined by the corresponding parameters. Through the robot parameter modification interface, we can easily modify the parameters of the robot, so as to make the robot more suitable for our application scenarios.
 
-在连接机器人后点击上方导航栏中的设置按钮，打开机器人设置界面。
+After connecting the robot, click the setting button in the navigation bar above to open the robot setting interface.
 
-![设置按钮](images/parms-btn.png)
+![setting button](images/parms-btn.png)
 
-如果导航栏并没有设置按钮则说明机器人不支持设置参数。可以在更新机器人程序后再次尝试。
+If there is no button in the navigation bar, the robot does not support setting parameters. You can try again after updating the robot.
 
-机器人设置界面如下
+The setting interface is as follows
 
-![设置参数界面](images/params.png)
+![setting-ui](images/params.png)
 
-修改需要改动的参数然后点击确认即可更新机器人参数。
+Modify the parameters that need to be changed, and then click OK to update the robot parameters.
 
-如果确认按钮为禁用状态说明机器人程序不支持参数修改功能，需要升级机器人程序后再次修改。
+If the confirm button is disabled, it indicates that the robot program does not support parameter modification function, and it needs to be modified again after upgrading the robot program.
 
-## 主要参数说明
+## 6.1 Main parameters 
 
-导航速度
+Robot Motion Params
 
-导航速度为机器人导航时的目标速度，同时也是最大速度。单位为米每秒如果导航速度相对于默认值变化不大可以直接修改。如果有比较大的变动则需要同时修改下面的几个PID控制参数。否则机器人可能会出现导航时摇摆不定，无法稳定导航的问题。
+- Navigation Speed
 
-最大角速度
+  The navigation speed is the target speed when the robot navigates, and it is also the maximum speed. The unit is meters per second. If the navigation speed changes little from the default value, it can be modified directly. If there are large changes, the following PID control parameters need to be modified at the same time. Otherwise, the robot may have the problem of unstable navigation.
 
-单位：弧度/秒。设置导航过程中的最大转动速度
+- Max angel speed
 
-PID控制参数
+  Unit: radian / second. Set the maximum rotation speed during navigation.
 
-机器人运动控制采用PID算法，K2, Kp, Ki, Kd即为相关的控制参数。如果你的PID控制算法比较熟悉可以按照一般的PID参数校调方法进行调整。如果不熟悉最好不要进行修改。
+- PID parameters
 
-PID控制(K2)
+  The motion control of robot adopts PID algorithm, and K2, KP, Ki, KD are related control parameters. If you are familiar with PID control algorithm, you can adjust it according to the general PID parameter calibration method. If you are not familiar with it, you'd better not change it.
 
-单位：无量纲。表示路径弯曲度对前进速度的影响因子，值越大，转弯时前进速度越小。推荐取值范围0.3到2.0。值太小会导致入弯转弯速度过大，而冲出路径。
+- - PID(K2)
 
-PID控制(Kp)
+    Unit: dimensionless. The larger the value, the smaller the forward speed when turning. The recommended range is 0.3 to 2.0. If the value is too small, the turning speed will be too high to rush out of the path.
 
-单位：无量纲。偏离路径时的PID比例控制因子。推荐取值范围0.3到2.0。值越大，回归路径的角速度会越大，过大的值会引发振荡使车左右摆动。值太小则会导致车偏离路径。
+- - PID(Kp)
 
-PID控制(Ki)
+    Unit: dimensionless. The PID proportional control factor when deviating from the path. The recommended range is 0.3 to 2.0. The larger the value is, the greater the angular velocity of the regression path will be. If the value is too large, it will cause oscillation and make the car swing left and right. If the value is too small, it will cause the car to deviate from the path.
 
-单位：无量纲。偏离路径时的PID积分控制因子。绝大部分情况下都不用调整该值。
+- - PID(Ki)
 
-PID控制(Kd)
+    Unit: dimensionless. The PID integral control factor when deviating from the path. In most cases, you don't need to change value.
 
-单位：无量纲。偏离路径时的PID微分控制因子。推荐取值范围-1.0到2.0。这个值用来消除角速度振荡现象，值合适时可以消除车直线行驶时的左右摆动。值不合适同时过大时则会加强左右摆动的振荡现象。
+- - PID(Kd)
 
-预估距离
+    Unit: dimensionless. The PID differential control factor of deviation path. The recommended value range is - 1.0 to 2.0. This value is used to eliminate the phenomenon of angular velocity oscillation, and when the value is appropriate, it can eliminate the left and right swing when the vehicle is running in a straight line. When the value is not suitable and too high, the oscillation phenomenon of left-right oscillation will be strengthened.
 
-单位：米。运动控制参数前进方向瞄准距离，值越大，对路径的贴合效果越差（在不绕开模式时会影响通行效率），但是速度会更流畅，左右摆动幅度更小。
+- - Look ahead distance
 
-避障设置
+    Unit: meter. The higher the value of the motion control parameter forward direction aiming distance is, the worse the fitting effect of the path is (when the mode is not bypassed, the traffic efficiency will be affected), but the speed will be smoother and the swing range will be smaller.
 
-![避障示意图](/images/obstacles.jpg)
+Barrier Avoidance Settings
 
-是否绕开
+![barrier avoidance picture](/images/obstacles.jpg)
 
-勾选后表示选择遇到障碍物绕行的模式（绕不开也会停止移动，直到障碍物消失），取消勾选表示选择遇到障碍物停止移动的模式（障碍物消失后自动继续任务）。
+- Get around
 
-绕开半径
+  If checked, it means to select the mode of detouring when encountering obstacles (if it can't be bypassed, it will stop moving until the obstacle disappears), and canceling the check means to select the mode of stopping moving when encountering obstacles (the task will continue automatically after the obstacle disappears).
 
-单位：米。只在绕行模式下才有效。对应上图中的“绕行时与障碍物的距离”，同时表示最小可通过路径的一半宽度（例如设为0.5米，表示最小通过宽度是1米）。这个值不能小于车的实际宽度的一半。
+- Get around radius
 
-车体宽度
+  Unit: meter. Only works in bypass mode. It corresponds to the "distance between the obstacle and the detour" in the above figure, and also represents half the width of the minimum passable path (for example, setting it to 0.5 m means that the minimum passing width is 1 m). This value cannot be less than half the actual width of the car.
 
-单位：米。对应上图中的“左避障距离”+“右避障距离”。一般设为车实际宽度大小。
+- Robot width
 
-车体旋转宽度
+  Unit: meter. It corresponds to "left obstacle avoidance distance" + "right obstacle avoidance distance" in the above figure. It is generally set as the actual width of the car.
 
-单位：米。表示车对角线长度。当障碍物距离小于这个设定值一半时，无法旋转，角速度强制为零。
+- Robot rotate width
 
-最大后退时间
+  Unit: meter. Represents the diagonal length of the car. When the distance between the obstacles is less than half of the set value, it cannot rotate and the angular velocity is forced to zero.
 
-单位：秒。只在绕行模式下才有效。表示在无法前进情况下，最大持续后退时间。最好设成一个大于零的小值，否者会影响可通行效果。
+- Back time
 
-避障距离
+  Unit: second. Only works in bypass mode. Indicates the maximum continuous backward time in case of no forward. It is better to set it to a small value greater than zero, otherwise the passable effect will be affected.
 
-单位：米。对应上图中的“前方障碍物距离”。即车与障碍物之间的安全距离，小于这个值时车无法向前移动，但是允许原地旋转。
+- Avoid distance
 
-地图设置
+  Unit: meter. It corresponds to "obstacle distance ahead" in the figure above. When the safe distance between the vehicle and the obstacle is less than this value, the car cannot move forward, but it is allowed to rotate in place.
 
-机器人的默认导航地图和对应的导航路径设置。在开启自动切换地图的功能时，机器人会按照此处的设置自动载入相关地图对应的路径。可以用于实现机器人自动导航场景切换，如从一号仓库自动切换到二号仓库。从一层场景自动切换到二层场景。
+Map Setting
+
+The robot's default navigation map and corresponding navigation path settings. When the automatic map switching function is turned on, the robot will automatically load the path corresponding to the relevant map according to the settings here. It can be used to realize the scene switching of robot automatic navigation, such as automatic switching from No.1 warehouse to No.2 warehouse. Automatically switch from the first level scene to the second level scene.

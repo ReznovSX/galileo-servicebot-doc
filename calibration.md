@@ -1,55 +1,55 @@
-# 机器人标定
+# Chapter5 The Calibration of Robot
 
-在使用机器人的过程中，由于机器人组装时的误差。会导致程序内置参数和机器人实际参数存在误差，从而影响到机器人的定位和导航的精度。使用机器人标定工具可以对机器人参数进行标定，降低这部分误差从而提高机器人的定位和导航精度。
+In the process of using the robot, due to the robot assembly error. The built-in parameters of the robot and navigation will lead to errors in the actual positioning and positioning of the robot. The robot parameters can be calibrated by using the robot calibration tool, which can reduce the error and improve the positioning and navigation accuracy of the robot.
 
-机器人的标定包含两个部分。一个是陀螺仪标定，一个是摄像头参数标定。
+The calibration of robot consists of two parts. One is IMU calibration, the other is camera calibration.
 
-演示视频
+Demo video
 
 <video src="https://bwbot.org/s/sHt8wN" controls style="max-width: 100%"></video>
 
-## 陀螺仪标定
+## 5.1 IMU calibration
 
-陀螺仪是机器人用来短距离定位的设备。相当于人类的小脑。首先打开客户端，连接机器人。
+IMU is a kind of equipment used by robot to locate in short distance. First open the client and connect the robot.
 
-![连接机器人](./images/calib-1.png)
+![connect to robot](./images/calib-1.png)
 
-点击右下角的校正机器人参数
+Click "Robot Calibration"
 
-![校正机器人参数](./images/calib2.png)
+![Robot Calibration](./images/calib2.png)
 
-接着点击校正陀螺仪
+Then click IMU Calibration
 
-![校正陀螺仪](./images/calib3.png)
+![IMU Calibration](./images/calib3.png)
 
-弹出标定陀螺仪窗口。此时窗口中会显示陀螺仪数据。此数值越小则说明机器人陀螺仪越准确。
+The IMU calibration window will pop up. The IMU data will be displayed in the window. The smaller the value is, the more accurate IMU is.
 
-点击开始标定即可标定。注意在标定过程中千万不能触碰机器人。这样会导致标定产生很大误差。整个标定过程可能需要两分钟。请耐心等待。
+Click "Start Calibration" to calibrate. Pay attention not to touch the robot during calibration. This will lead to a large error in calibration. The whole calibration process may take two minutes. Please be patient.
 
-标定完成后即可关闭陀螺仪标定窗口。
+After the calibration is completed, you can close IMU calibration window.
 
-## 摄像头标定
+## 5.2 Camera calibration
 
-摄像头标定过程需要遥控机器人在环境中导出走动，所以在开始标定之前请保证能够有足够的空间供机器人移动。
+The camera calibration process requires the remote robot to move around in the environment, so please ensure that there is enough space for the robot to move before starting the calibration.
 
-点击右下角的校正摄像头按钮。弹出摄像头校正窗口。
+Click "camera calibration" button in the lower right corner. The camera calibration window will pop up. Then according to your robot, you need to choose the correct button to calibrate the front/back camera or just a single camera.
 
-![摄像头校正](./images/calib4.png)
+![camera calibration](./images/calib4.png)
 
-根据提示，遥控机器人到较开阔的位置。然后点击开始按钮。
+According to the prompt, remote control the robot to a more open position. Then click the start button.
 
-此时机器人会进入建图状态。
+At this time, the robot will enter the building-map status.
 
-![启动摄像头校准](./images/calib5.png)
+![start to calibrate](./images/calib5.png)
 
-按照窗口提示，移动机器人形成一个闭环。
+According to the window prompt, move your robot forms a closed-loop.
 
-![闭环](./images/calib6.png)
+![closed-loo](./images/calib6.png)
 
-等待闭环完成，形成闭环后继续遥控机器人前进一段距离。此时机器人会自动计算出标定参数，和误差。
+Wait for the closed-loop to complete, and then continue to move forward for a distance. At this time, the robot will automatically calculate the calibration parameters and errors.
 
-![标定结果](./images/calib7.png)
+![calibration result](./images/calib7.png)
 
-比较好的结果可以达到99%以上。你可以根据准确度决定是否接受标定结果。如果接受结果，点击确认更新按钮即可。
+Better results can reach more than 99%. Whether you can accept the calibration depends on the accuracy of the results. If you accept the results, click the confirm Update button.
 
-至此标定完成。
+Now calibration is done.

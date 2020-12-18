@@ -1,42 +1,43 @@
-# 二、遥控图传
+# Chapter2 Ues Remote Control with Image
 
-## 2.1 控制端电脑接入工作网路
+## 2.1 Connect to the network
 
-控制端电脑需要和机器人在同一个无线网络下，控制软件的安装请参考第一章。
-对于自带路由器的机器人可以直接把控制端电脑连接至机器人路由器。
+The computer with installed software needs to be in the same wireless network as the robot. Please refer to Chapter 1 to install the software.
+As for the robot with router, you can connect your pc to the router of robot.
 
 ![remote-3](/images/remote-3.jpg)
 
-## 2.2 控制端软件的操作
+## 2.2 Introduction of UI
 
 ![remote-4](/images/remote-4.png)
 
-### 2.2.1 遥控图传的开启
+### 2.2.1 Start to use
 
-`点击`主界面上的`“未连接”`按钮，建立遥控端与底盘的通信链路，首次运行会弹出下图防火墙警告，请选择“允许访问”。如果没有弹出这个窗口，且客户端无法连接机器人，那么需要手动添加程序到防火墙规则。具体方法可以搜索一下。
+`CLIIK` the `“Not Connected”` button to connect robot. Firewall warning will pop up in the first run, please select "Allow access".
+If this window does not pop up, or the client cannot connect to the robot WIFI, you need to manually add the "ChiTuClient.exe" to the firewall rules.
 
 ![remote-5](/images/remote-5.png)
 
-连接成功后，主界面变成下图所示，现在可以开始遥控底盘运动。
+After connecting successfully, UI changes as below. Now we can control robot.
 
 ![remote-6](/images/remote-6.png)
 
-底盘运动控制`支持键盘`操纵，操作风格类似极品飞车游戏。WSAD控制上下左右，上下箭头控制速度档位。
+Chassis motion control `support keyboard` manipulation, WSAD controls front and back, left and right, and up and down arrows control the speed gear.
 
-在图传画面区域`右键`打开图传菜单，如下图
+Right click the screen1 
 
 ![remote-7](/images/remote-7.png)
 
-选择`“原始图像”`，现在可以看到机器人的第一视角画面，图传已经开启
+And then choose `“Raw image”`, now we can see the image from the front camera, the transmisson of image already start. 
 
 ![remote-8](/images/remote-8.png)
 
-在右键菜单中选择`“关闭”`，可以结束图传
+Click `“close”` in the right-click-menu can end the transmission
 
-### 2.2.2 图传遥控的关闭
+### 2.2.2 How to close the software
 
-直接关闭软件即可，如果需要关闭设备电源，请先点击主界面上的“关机”按钮使车载主机关机,再关闭车底盘数码管旁边开关，确保主机关机后（主机灯熄灭）再拔掉电池与车底盘接线。
+Just click `X` in the upper right corner. If you want to turn off the robot, you must first click the "Shutdown" button on the main interface to turn off the robot host, and then turn off the robot power switch.
 
-本章演示视频：
+Demo Video：
 
-[遥控图传操作](https://www.bwbot.org/s/HxW3Mp)
+[Operation](https://www.bwbot.org/s/HxW3Mp)
